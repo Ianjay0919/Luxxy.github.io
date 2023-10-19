@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;500&family=Seaweed+Script&display=swap" rel="stylesheet">        
+        <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Martian+Mono:wght@600&display=swap" rel="stylesheet">        
+        <title>WOMEN</title>
+    </head>
+    <style>
+        /*For desktop*/
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        @media only screen and (max-width: 669px) {
+            /*For mobile phones*/
+            [class*="col-"] {
+                width: 100%;
+            }
+        }
+        body{
+            background-color: rgb(205, 250, 213);
+        }
+        #box{
+            height: 47vw;
+        }
+        #row1{
+            font-family: 'Martian Mono', monospace;
+            background-color: rgba(255, 255, 255, 0.9);
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+        #row2{
+            margin-top: 40px;
+        }
+        #row3{
+            font-family: 'Martian Mono', monospace;
+        }
+        #page_links{
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        a:visited, a:active, a:link {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        .nav-link{
+            margin-right: 40px;
+        }
+        #dropdown1:hover, #home:hover{
+            color: rgb(255, 128, 128);
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(255, 207, 150);
+            width: 20vw;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 10px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            font-size: 10pt;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #cart_count{
+            font-size: 7pt;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #icons{
+            margin-left: 20px;
+        }
+        .results, .sort_by{
+            font-size: 9pt;
+        }
+        .numbers{
+            font-size: 15pt;
+        }
+        #sort_btn{
+            border-style: none;
+            border-radius: 0%;
+            font-size: 10pt;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: rgb(255, 128, 128);
+        }
+        #sort_btn:hover{
+            color: rgb(246, 253, 195);
+            border-style: none;
+        }
+        .sort_container2{
+            float: right;
+            margin-right: 4vw;
+        }
+        .accordion-button, .accordion-body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10pt;
+        }
+        .accordion-header{
+            background-color: aqua;
+        }
+        .dropdown_content{
+            font-size: 11pt;
+        }
+        #cards{
+            border-radius: 0;
+        }
+        #cards_container{
+            padding: 0% 5%;
+        }
+        .card-title{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 12pt;
+        }
+        .card-text{
+            font-family: 'Martian Mono', monospace;
+            font-size: 13pt;
+            color: #FF8080;
+        }
+        .accordion{
+            position: sticky;
+            top: 10vw;
+            --bs-accordion-btn-bg: #CDFAD5;
+            --bs-accordion-active-bg: #FF8080;
+            --bs-accordion-btn-focus-box-shadow: none;
+        }
+        .accordion-button:not(.collapsed){
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 12pt;
+            color: black;
+        }
+        #logo{
+            height: 30px;
+        }
+        #gender{
+            font-size: 10pt;
+            text-align: left;
+            color: gray;
+        }
+        #body-size{
+            font-size: 10pt;
+            text-align: right;
+            color: gray;
+        }
+        #icons:hover{
+            cursor: pointer;
+            color: rgb(255, 128, 128);
+        }
+        #row4{
+            background-color: rgb(206, 206, 206);
+            padding-top: 5%;
+        }
+        #footer-text{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11pt;
+        }
+        #footer-link:link{
+            text-decoration: underline;
+        }
+        #social-icons{
+            height: 40px;
+            width: 40px;
+        }
+
+    </style>
+    <body>
+        <div id="box" class="container-fluid">
+            <div id="row1" class="row">
+                <div id="navbar" class="col-12">
+                    <nav class="navbar navbar-light navbar-expand-lg bg-*">
+                        <div id="nav_container" class="container-fluid">
+                        <a class="navbar-brand" href="index.html"><img id="logo" src="Screenshot 2023-10-17 215138.png"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul id="page_links" class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a id="home" class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a id="dropdown1" class="nav-link active" aria-current="page" href="women.html">WOMEN
+                                        <i class="fa fa-caret-down"></i>
+                                    </a>
+                                    <div class="dropdown-content">
+                                        <a href="#">TOPS</a>
+                                        <a href="#">BOTTOMS</a>
+                                        <a href="#">OUTERWEAR</a>
+                                        <a href="#">INNERWEAR & UNDERWEAR</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a id="dropdown1" class="nav-link active" aria-current="page" href="men.html">MEN
+                                        <i class="fa fa-caret-down"></i>
+                                    </a>
+                                    <div class="dropdown-content">
+                                        <a href="#">TOPS</a>
+                                        <a href="#">BOTTOMS</a>
+                                        <a href="#">OUTERWEAR</a>
+                                        <a href="#">ACCESSORIES</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a id="dropdown1" class="nav-link active" aria-current="page" href="kids.html">KIDS
+                                        <i class="fa fa-caret-down"></i>
+                                    </a>
+                                    <div class="dropdown-content">
+                                        <a href="#">TOPS</a>
+                                        <a href="#">BOTTOMS</a>
+                                        <a href="#">DRESSES</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a id="dropdown1" class="nav-link active" aria-current="page" href="baby.html">BABY
+                                        <i class="fa fa-caret-down"></i>
+                                    </a>
+                                    <div class="dropdown-content">
+                                        <a href="#">NEWBORN (0-6 MONTHS)</a>
+                                        <a href="#">NEWBORN (6-24 MONTHS)</a>
+                                        <a href="#">TODDLER (2-5 YEARS)</a>
+                                    </div>
+                                </div>
+                            </li>
+                            </ul>
+                            <!--login button-->
+                            <a href="login.html"><span id="icons" class="material-symbols-outlined">
+                                person
+                                </span></a>
+                            <a href="wishlist.html"><span id="icons" class="material-symbols-outlined">
+                                favorite
+                                </span></a>
+                            <a href="cart.html"><span id="icons" class="material-symbols-outlined">
+                                shopping_cart
+                                <span id="cart_count" class="position-absolute top-2 start-110 translate-middle badge rounded-pill bg-danger">
+                                  8
+                                  <span class="visually-hidden">unread messages</span>
+                                </span></a>
+                            </span>
+                        </div>
+                        </div>
+                    </nav>
+
+                </div>
+
+            </div>
+
+            <br>
+
+            <div id="row2" class="row">
+                <div class="col-3">
+                    <h6 class="results">RESULTS</h6>
+                    <h6 class="numbers">200 Items</h6>
+                </div>
+                <div id="sort_container" class="col-9">
+                    <div class="sort_container2">
+                        <h6 class="sort_by">SORT BY</h6>
+                            <div class="dropdown">
+                                <button id="sort_btn" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                FEATURED
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">New arrivals</a></li>
+                                    <li><a class="dropdown-item" href="#">Low to high</a></li>
+                                    <li><a class="dropdown-item" href="#">High to low</a></li>
+                                    <li><a class="dropdown-item" href="#">Top rated</a></li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <!--WOMEN-->
+            <div id="row3" class="row">
+                <div class="col-3">
+                    <h3>WOMEN</h3>
+                    <div class="accordion accordion-flush">
+                        <!--drop down tops-->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                TOPS
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <h6 class="dropdown_content">All Tops</h6>
+                                <h6 class="dropdown_content">T-shirts</h6>
+                                <h6 class="dropdown_content">Bra Tops</h6>
+                                <h6 class="dropdown_content">All Tops</h6>
+                                <h6 class="dropdown_content">Shirts & Blouses (Sleeveless & Short Sleeves)</h6>
+                                <h6 class="dropdown_content">Shirts & Blouses (3/4 & Long Sleeves)</h6>
+                                <h6 class="dropdown_content">Sweatshirts & Hoodies</h6>
+                                <h6 class="dropdown_content">Sweaters & Cardigans</h6>
+                                <h6 class="dropdown_content">Fleece</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <!--drop down bottoms-->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                BOTTOMS
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <h6 class="dropdown_content">All Bottoms</h6>
+                                <h6 class="dropdown_content">Jeans</h6>
+                                <h6 class="dropdown_content">Leggings Pants</h6>
+                                <h6 class="dropdown_content">Casual Pants</h6>
+                                <h6 class="dropdown_content">Cargo Pants</h6>
+                                <h6 class="dropdown_content">Sweat Pants</h6>
+                                <h6 class="dropdown_content">Wide Pants</h6>
+                                <h6 class="dropdown_content">Ankle & Cropped Pants</h6>
+                                <h6 class="dropdown_content">AirSense Pants</h6>
+                                <h6 class="dropdown_content">Trousers</h6>
+                                <h6 class="dropdown_content">Shorts & Skorts</h6>
+                                <h6 class="dropdown_content">Skirts</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <!--drop down outerwear-->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                OUTERWEAR
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <h6 class="dropdown_content">All Outerwear</h6>
+                                <h6 class="dropdown_content">Parkas & Blousons</h6>
+                                <h6 class="dropdown_content">Jackets & Coats</h6>
+                                <h6 class="dropdown_content">AirSense Jackets</h6>
+                                <h6 class="dropdown_content">Ultra Light Down & Warm Padded</h6>
+                                <h6 class="dropdown_content">Down</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <!--drop down sport utility wear-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                  SPORT UTILITY WEAR
+                              </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="accordion-body">
+                                    <h6 class="dropdown_content">Sport Utility Wear</h6>
+                              </div>
+                            </div>
+                        </div>
+                        <!--drop down loungewear-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                  LOUNGEWEAR
+                              </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="accordion-body">
+                                  <h6 class="dropdown_content">All Loungewear</h6>
+                                  <h6 class="dropdown_content">Easy & Relaxed Pants</h6>
+                                  <h6 class="dropdown_content">RELACO</h6>
+                                  <h6 class="dropdown_content">Loungewear & Pajamas</h6>
+                                  <h6 class="dropdown_content">Room Shoes</h6>
+                              </div>
+                            </div>
+                        </div>
+                        <!--drop down innerwear and underwear-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                                INNERWEAR & UNDERWEAR
+                              </button>
+                            </h2>
+                            <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="accordion-body">
+                                  <h6 class="dropdown_content">All Innerwear & Underwear</h6>
+                                  <h6 class="dropdown_content">HEATTECH Innerwear</h6>
+                                  <h6 class="dropdown_content">AIRism Innerwear</h6>
+                                  <h6 class="dropdown_content">Undershirts</h6>
+                                  <h6 class="dropdown_content">Bras</h6>
+                              </div>
+                            </div>
+                        </div>
+                        <!--drop down maternity clothes-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                                MATERNITY CLOTHES
+                              </button>
+                            </h2>
+                            <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="accordion-body">
+                                  <h6 class="dropdown_content">All Innerwear & Underwear</h6>
+                                  <h6 class="dropdown_content">HEATTECH Innerwear</h6>
+                                  <h6 class="dropdown_content">AIRism Innerwear</h6>
+                                  <h6 class="dropdown_content">Undershirts</h6>
+                                  <h6 class="dropdown_content">Bras</h6>
+                              </div>
+                            </div>
+                        </div>
+                        <!--drop down accessories-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                                ACCESSORIES
+                              </button>
+                            </h2>
+                            <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                              <div class="accordion-body">
+                                  <h6 class="dropdown_content">All Accessories</h6>
+                                  <h6 class="dropdown_content">Bags</h6>
+                                  <h6 class="dropdown_content">Hats & Caps</h6>
+                                  <h6 class="dropdown_content">Scarves & Stoles</h6>
+                                  <h6 class="dropdown_content">Gloves</h6>
+                                  <h6 class="dropdown_content">Belts</h6>
+                                  <h6 class="dropdown_content">Shoes & Boots</h6>
+                                  <h6 class="dropdown_content">Sunglasses</h6>
+                              </div>
+                            </div>
+                        </div>
+                    </div><br><br>
+
+                </div>
+                <!--items for sale column-->
+                <div class="col-9">
+                    <div class="row">
+                        <!--cards-->
+                        <div id="cards_container" class="container-fluid">
+                            <!--row1 cards-->
+                            <div id="row1cards" class="row">
+                                <div id="cards" class="col-lg-3 d-flex align-items-stretch">
+                                    <a href="item-view.html"><div class="card">
+                                        <img src="pexels-anj-namoro-2850487.jpg" class="card-img-top" alt="...">
+
+                                        <div class="card-body">
+                                            <div class="row">
+                                            <div class="col-6">
+                                                <h5 id="gender" class="body-size">UNISEX</h5> 
+                                            </div>
+                                            <div class="col-6">
+                                                <h5 id="body-size" class="body-size">S-3XL</h5> 
+                                            </div>
+                                            </div>
+                                          <h5 class="card-title">AIRism Cotton Striped Oversized Crew Neck Half Sleeve T-Shirt</h5>
+                                          <p class="card-text">PHP 790.00</p>
+                                        </div>
+                                    </div></a>
+                                </div>
+                                <div id="cards" class="col-lg-3 d-flex align-items-stretch">
+                                    <a href="item-view.html"><div class="card">
+                                        <img src="pexels-anj-namoro-2850487.jpg" class="card-img-top" alt="...">
+
+                                        <div class="card-body">
+                                            <div class="row">
+                                            <div class="col-6">
+                                                <h5 id="gender" class="body-size">UNISEX</h5> 
+                                            </div>
+                                            <div class="col-6">
+                                                <h5 id="body-size" class="body-size">S-3XL</h5> 
+                                            </div>
+                                            </div>
+                                          <h5 class="card-title">AIRism Cotton Striped Oversized Crew Neck Half Sleeve T-Shirt</h5>
+                                          <p class="card-text">PHP 790.00</p>
+                                        </div>
+                                    </div></a>
+                                </div>
+                                <div id="cards" class="col-lg-3 d-flex align-items-stretch">
+                                    <a href="item-view.html"><div class="card">
+                                        <img src="pexels-anj-namoro-2850487.jpg" class="card-img-top" alt="...">
+
+                                        <div class="card-body">
+                                            <div class="row">
+                                            <div class="col-6">
+                                                <h5 id="gender" class="body-size">UNISEX</h5> 
+                                            </div>
+                                            <div class="col-6">
+                                                <h5 id="body-size" class="body-size">S-3XL</h5> 
+                                            </div>
+                                            </div>
+                                          <h5 class="card-title">AIRism Cotton Striped Oversized Crew Neck Half Sleeve T-Shirt</h5>
+                                          <p class="card-text">PHP 790.00</p>
+                                        </div>
+                                    </div></a>
+                                </div>
+                                <div id="cards" class="col-lg-3 d-flex align-items-stretch">
+                                    <a href="item-view.html"><div class="card">
+                                        <img src="pexels-anj-namoro-2850487.jpg" class="card-img-top" alt="...">
+
+                                        <div class="card-body">
+                                            <div class="row">
+                                            <div class="col-6">
+                                                <h5 id="gender" class="body-size">UNISEX</h5> 
+                                            </div>
+                                            <div class="col-6">
+                                                <h5 id="body-size" class="body-size">S-3XL</h5> 
+                                            </div>
+                                            </div>
+                                          <h5 class="card-title">AIRism Cotton Striped Oversized Crew Neck Half Sleeve T-Shirt</h5>
+                                          <p class="card-text">PHP 790.00</p>
+                                        </div>
+                                    </div></a>
+                                </div>
+
+                            </div><br><br>
+                            <!--row 2 cards-->
+                            <div id="row1cards" class="row">
+                                <div id="cards" class="col-lg-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                        <img src="pexels-anj-namoro-2850487.jpg" class="card-img-top" alt="...">
+
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h5 id="gender" class="body-size">UNISEX</h5> 
+                                                </div>
+                                                <div class="col-6">
+                                                    <h5 id="body-size" class="body-size">S-3XL</h5> 
+                                                </div>
+                                                </div>
+                                              <h5 class="card-title">AIRism Cotton Striped Oversized Crew Neck Half Sleeve T-Shirt</h5>
+                                              <p class="card-text">PHP 790.00</p>
+                                            </div>
+                                      </div>
+                                </div>
+                                <div id="cards" class="col-lg-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                        <img src="pexels-anj-namoro-2850487.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h5 id="gender" class="body-size">UNISEX</h5> 
+                                                </div>
+                                                <div class="col-6">
+                                                    <h5 id="body-size" class="body-size">S-3XL</h5> 
+                                                </div>
+                                                </div>
+                                              <h5 class="card-title">AIRism Cotton Striped Oversized Crew Neck Half Sleeve T-Shirt</h5>
+                                              <p class="card-text">PHP 790.00</p>
+                                            </div>
+                                      </div>
+                                </div>
+                                <div id="cards" class="col-lg-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                        <img src="pexels-anj-namoro-2850487.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h5 id="gender" class="body-size">UNISEX</h5> 
+                                                </div>
+                                                <div class="col-6">
+                                                    <h5 id="body-size" class="body-size">S-3XL</h5> 
+                                                </div>
+                                                </div>
+                                              <h5 class="card-title">AIRism Cotton Striped Oversized Crew Neck Half Sleeve T-Shirt</h5>
+                                              <p class="card-text">PHP 790.00</p>
+                                            </div>
+                                      </div>
+                                </div>
+                                <div id="cards" class="col-lg-3 d-flex align-items-stretch">
+                                    <div class="card">
+                                        <img src="pexels-anj-namoro-2850487.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h5 id="gender" class="body-size">UNISEX</h5> 
+                                                </div>
+                                                <div class="col-6">
+                                                    <h5 id="body-size" class="body-size">S-3XL</h5> 
+                                                </div>
+                                                </div>
+                                              <h5 class="card-title">AIRism Cotton Striped Oversized Crew Neck Half Sleeve T-Shirt</h5>
+                                              <p class="card-text">PHP 790.00</p>
+                                            </div>
+                                      </div>
+                                </div>
+
+                            </div><br><br>
+
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="row4" class="row d-flex justify-content-center">
+                
+                <div id="footer" class="col-lg-2 col-md-6">
+                    <h5>About Luxxy</h5><br>
+                    <h6 id="footer-text">Information</h6>
+                    <h6 id="footer-text">Careers</h6>
+                </div>
+
+                <div id="footer" class="col-lg-2 col-md-6">
+                    <h5>Help</h5><br>
+                    <h6 id="footer-text">FAQ</h6>
+                    <h6 id="footer-text">Return Policy</h6>
+                    <h6 id="footer-text">Bulk Order</h6>
+                    <h6 id="footer-text">Accessibility</h6>
+                </div>
+
+                <div id="footer" class="col-lg-2 col-md-6">
+                    <h5>Account</h5><br>
+                    <h6 id="footer-text">Membership</h6>
+                    <h6 id="footer-text">Profile</h6>
+                    <h6 id="footer-text">Coupons</h6>
+                </div>
+
+                <div id="footer" class="col-lg-2 col-md-6">
+                    <h5>E-Newsletter</h5><br>
+                    <h6 id="footer-text">Sign up and be the first-in-the know about new arrivals, promotions, in-store events and more.</h6>
+                    <a href="#"><h6 id="footer-link">SUBSCRIBE NOW</h6></a>
+                </div>
+
+                <div id="footer" class="col-lg-2 col-md-6">
+                    <h5>Luxxy Social Account</h5><br>
+                    <div id="row4" class="row">
+                        <div class="col-4">
+                        <a href="#"><img id="social-icons" src="facebook.png"></a></div>
+                        <div class="col-4">
+                        <a href="#"><img id="social-icons" src="twitter.png"></a></div>
+                        <div class="col-4">
+                        <a href="#"><img id="social-icons" src="instagram.png"></a></div>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+
+        </script>
+        
+    </body>
+</html>
