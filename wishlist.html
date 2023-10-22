@@ -61,7 +61,12 @@
         }
         @media (max-width: 700px) {
             #item-img {
-                text-align: center;
+                text-align: center !important;
+            }
+        }
+        @media (max-width: 700px) {
+            #row2 {
+                margin-top: 10% !important;
             }
         }
         body{
@@ -149,9 +154,7 @@
             padding-bottom: 2%;
         }
         #row2-1{
-            padding-top: 70px;
-            margin-top: 0px;
-            margin-left: 8%;
+                margin-left: 8%;
             margin-right: 8%;
         }
         #item-name, #order-summary{
@@ -187,7 +190,6 @@
             font-size: 12pt;
         }
         #row2-2{
-            margin-top: 10%;
             background-color: white;
             padding-top: 3%;
             padding-bottom: 3%;
@@ -228,9 +230,11 @@
         #footer-text:hover{
             text-decoration: underline;
         }
-
+        #row2{
+            padding-top: 4%;
+            margin-left: 3%;
+        }
 </style>
-    </style>
     <body>
 
         <div id="box" class="container-fluid">
@@ -321,6 +325,9 @@
 
                 </div>    
 
+            </div>
+            <div id="row2" class="row">
+                <div id="shopping-cart-title" class="col-12">WISHLIST</div>
             </div>
             <!--row2-1-->
             <div id="row2-1" class="row">
