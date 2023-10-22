@@ -5,34 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;500&family=Seaweed+Script&display=swap" rel="stylesheet">        
         <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@600&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1">    
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">    
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <title>CHECKOUT</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <title>ABOUT</title>
     </head>
     <style>
-        @keyframes fade-down {
-            0%{
-                opacity: 0;
-                transform: translateY(-30px) scale(1); 
-            }
-        }
-        @keyframes fade-up {
-            0%{
-                opacity: 0;
-                transform: translateY(30px) scale(1); 
-            }
-        }
-        @keyframes fade-left {
-            0%{
-                opacity: 0;
-                transform: translateX(30px) scale(1); 
-            }
-        }
-
         /*For desktop*/
         .col-1 {width: 8.33%;}
         .col-2 {width: 16.66%;}
@@ -47,7 +25,7 @@
         .col-11 {width: 91.66%;}
         .col-12 {width: 100%;}
 
-        @media only screen and (max-width: 669px) {
+        @media only screen and (max-width: 700px) {
             /*For mobile phones*/
             [class*="col-"] {
                 width: 100%;
@@ -119,7 +97,7 @@
             background-color: rgb(206, 206, 206);
             padding-top: 5%;
         }
-        #footer-text, #cloth-color, #product-id, #cloth-size{
+        #footer-text{
             font-family: Arial, Helvetica, sans-serif;
             font-size: 11pt;
         }
@@ -130,101 +108,38 @@
             height: 40px;
             width: 40px;
         }
-        #shopping-cart-title{
-            font-family: 'Martian Mono', monospace;
-            font-size: 20pt;
-            padding-top: 2%;
-            padding-bottom: 2%;
-        }
-        #row2{
-            padding-top: 45px;
-            margin-top: 0px;
-        }
-        #row2, #row2-1{
-            margin-left: 3%;
-            margin-right: 3%;
-        }
-        #item-name, #order-summary{
-            font-family: 'Martian Mono', monospace;
-            font-size: 12pt;
-            word-spacing: -4px;
-        }
-        #subtotal-label{
-            font-family: 'Martian Mono', monospace;
-            font-size: 10pt;
-        }
-        #items-subtotal1, #items-subtotal2{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 12pt;
-        }
-        #row2-2{
-            background-color: white;
-            padding-top: 3%;
-            padding-bottom: 3%;
-        }
-        #subtotal1, #subtotal2{
-            font-family: 'Martian Mono', monospace;
-            font-size: 15pt;
-        }
-        #cs-btn{
-            color: black;
-            background-color: white;
-            font-family: 'Martian Mono', monospace;   
-            border-style: none;  
-            width: 100%;
-            height: 40px;  
-            border-style: solid;
-            border-width: 1px;
-        }
-        #cs-btn:hover{
-            background-color: rgb(255, 207, 150);
-        }
-        #row2-1{
-            margin-bottom: 11vw;
-        }
-        #del-opt, #pay-opt{
-            font-family: 'Martian Mono', monospace;
-        }
-        #reg-add{
-            border: none;
-            background-color: rgb(255, 128, 128);
-            height: 30px;
-            font-family: 'Martian Mono', monospace;
-            font-size: 10pt;
-        }
-        #reg-add:hover{
-            color: rgb(255, 207, 150);
-        }
-        #add-lbl{
-            font-family: 'Martian Mono', monospace;
-            font-size: 10pt;
-        }
-        #defaultCheck1{
-            border-color: black;
-        }
-        #payment{
-            font-size: 10pt;
-        }
-        #plc-order{
-            border: 0;
-            background-color: rgb(255, 128, 128);
-            height: 40px;
-            border-radius: 0;
-        }
-        #plc-order:hover{
-            color: rgb(255, 207, 150);
-        }
-        #container{
-            padding-bottom: 40px;
-            padding-top: 40px;
-        }
         #footer-text:hover{
             text-decoration: underline;
         }
-
-</style>
+        #about-title{
+            font-family: 'Martian Mono', monospace;
+        }
+        #row2{
+            padding-top: 65px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        #about-text1, #about-text2, #text3{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #about-img{
+            height: 200px;
+            width: 300px;
+            object-fit: fill;
+        }
+        #text-link:link{
+            text-decoration: underline;
+        }
+        #about-container{
+            background-color: white;
+            padding-top: 10px;
+            box-shadow: 0px 0px 3px;
+        }
+        #row2{
+            margin-bottom: 10px;
+        }
+    </style>
     <body>
-
         <div id="box" class="container-fluid">
 
             <div id="row1" class="row">
@@ -292,6 +207,7 @@
                                     </div>
                                 </div>
                             </li>
+
                             </ul>
                             <!--login button-->
                             <a href="login.html"><span id="icons" class="material-symbols-outlined">
@@ -314,107 +230,85 @@
                 </div>    
 
             </div>
-            <!--row2-->
+
             <div id="row2" class="row">
-                <div id="shopping-cart-title" class="col-12">CHECKOUT</div>
-            </div>
-            <!--row2-1-->
-            <div id="row2-1" class="row">
-                <div id="container" class="col-8 bg-light">
-                    <div id="del-opt" class="row">
-                        <h3>DELIVERY OPTION</h3>
-                    </div>
-                    <div id="row-del" class="row">
-                        <div class="col-4">
-                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                            <label id="add-lbl" class="form-check-label" for="defaultCheck1">
-                              Ship to active address
-                            </label>                        
-                        </div><br><br>
-                        <div class="col-8">
-                            <button id="reg-add">REGISTER NEW ADDRESS</button>
-                        </div>
-                    </div><br><br>
-
-                    <div id="pay-opt" class="row">
-                        <h3>PAYMENT OPTION</h3>
-                        <div class="col-sm-8">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            <label id="payment" class="form-check-label" for="flexRadioDefault2">
-                                Cash on Delivery
-                            </label><br>
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            <label id="payment" class="form-check-label" for="flexRadioDefault2">
-                                Credit/Debit Card
-                            </label><br>
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                            <label id="payment" class="form-check-label" for="flexRadioDefault2">
-                                Pay in Store
-                            </label><br><br><br>
-                            <button id="plc-order" type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                PLACE ORDER
-                            </button>
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h1 class="modal-title fs-5" id="exampleModalLabel">Purchase Complete</h1>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                      Your order has been placed. Please check your email.
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                        </div>
-                    </div>
-                    
-
+                <div class="col-12">
+                    <h3 id="about-title">ABOUT LUXXY</h3>
                 </div>
-            
-                <div class="col-4">
-                    <div class="col-12">
-                        <h4 id="order-summary">ORDER SUMMARY| 1 ITEM(S)</h4><br>
+                <div class="col-12">
+                    <h6 id="about-text1">LUXXY is a new company that ensures it provides casual clothes for all kinds of people.</h6>
+                </div><br><br><br>
+                <div class="row">
+                    <div id="about-text2" class="col-3">
+                        <h6>Corporate Information</h6>
+                        <h6>Business Overview</h6>
+                        <h6>Management Policy</h6>
+                        <h6>IR Information</h6>
+                        <h6>Global Brand Ambassadors</h6>
+                        <h6>LUXXY Web News</h6>
+                        <h6>Group Companies</h6><br><br>
+                    </div>
+                    <div id="about-container" class="col-9">
                         <div class="row">
-                        <div class="col-6">
-                            <h3 id="items-subtotal1">Item(s) subtotal</h3>
-                        </div>
-                        <div class="col-6">
-                            <h3 id="items-subtotal2">PHP 790.00</h3><br>
-                        </div>
-                        </div>
+                            <div class="col-4"><img id="about-img" src="image1.jpg"></div>
+                            <div class="col-8">
+                                <h6>CORPORATE INFORMATION</h6>
+                                <h6 id="text3">Company Profile</h6>
+                                <a id="text-link" href="#"><h6>SEE DETAILS</h6></a>
+                            </div>
+                        </div><hr>
                         <div class="row">
-                            <div class="col-6">
-                                <h3 id="subtotal1">SUBTOTAL</h3>
+                            <div class="col-4"><img id="about-img" src="image2.jpg"></div>
+                            <div class="col-8">
+                                <h6>BUSINESS OVERVIEW</h6>
+                                <h6 id="text3">Provides the current status of LUXXY's business.</h6>
+                                <a id="text-link" href="#"><h6>SEE DETAILS</h6></a>
                             </div>
-                            <div class="col-6">
-                                <h3 id="subtotal2">PHP 790.00</h3>
-                            </div>
-                        </div>
+                        </div><hr>
                         <div class="row">
-                            <div class="col-6">
-                                <h3 id="items-subtotal1">VAT included</h3>
+                            <div class="col-4"><img id="about-img" src="image3.jpg"></div>
+                            <div class="col-8">
+                                <h6>MANAGEMENT POLICY</h6>
+                                <h6 id="text3">Describes operation of Rapid Retail Group.</h6>
+                                <a id="text-link" href="#"><h6>SEE DETAILS</h6></a>
                             </div>
-                            <div class="col-6">
-                                <h3 id="items-subtotal2">PHP 84.64</h3><br>
-                            </div>
-                        </div>
+                        </div><hr>
                         <div class="row">
-                            <div class="col-6">
-                                <h3 id="subtotal1">ORDER TOTAL</h3>
+                            <div class="col-4"><img id="about-img" src="image4.jpg"></div>
+                            <div class="col-8">
+                                <h6>IR INFORMATION</h6>
+                                <h6 id="text3">Provides IR information on Rapid Retail Group.</h6>
+                                <a id="text-link" href="#"><h6>SEE DETAILS</h6></a>
                             </div>
-                            <div class="col-6">
-                                <h3 id="subtotal2">PHP 790.00</h3>
-                            </div><br><br>
+                        </div><hr>
+                        <div class="row">
+                            <div class="col-4"><img id="about-img" src="image5.jpg"></div>
+                            <div class="col-8">
+                                <h6>GLOBAL BRAND AMBASSADORS</h6>
+                                <h6 id="text3">LUXXY has teamed up with some of the world's top athletes</h6>
+                                <a id="text-link" href="#"><h6>SEE DETAILS</h6></a>
+                            </div>
+                        </div><hr>  
+                        <div class="row">
+                            <div class="col-4"><img id="about-img" src="image6.jpg"></div>
+                            <div class="col-8">
+                                <h6>LUXXY WEB NEWS</h6>
+                                <h6 id="text3">Delivers Information on LUXXY'S new products and new services</h6>
+                                <a id="text-link" href="#"><h6>SEE DETAILS</h6></a>
+                            </div>
+                        </div><hr>
+                        <div class="row">
+                            <div class="col-4"><img id="about-img" src="Screenshot 2023-10-17 215138.png"></div>
+                            <div class="col-8">
+                                <h6>GROUP COMPANIES</h6>
+                                <h6 id="text3">A list of LUXXY'S group companies</h6>
+                                <a id="text-link" href="#"><h6>SEE DETAILS</h6></a>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
-
 
             <div id="row3" class="row d-flex justify-content-center">
                 
@@ -466,6 +360,6 @@
 
         </script>
 
+        </div>
     </body>
-
 </html>
